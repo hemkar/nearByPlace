@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 
 @Aspect
 @Component
-@Order(1)
-public class BeforeAdvice {
+@Order(2)
+public class BeforeAdvice2 {
 	// before advice which calls point-cut declaration
 	@Before("com.nearby.aop.PointCuts.forServAndController()")
 	public void before() {
-		System.out.println("logging aspect for service and controller");
+		System.out.println("logging aspect 2 for service and controller");
 	}
 }
