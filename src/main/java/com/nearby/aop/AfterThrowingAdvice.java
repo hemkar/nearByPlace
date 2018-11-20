@@ -9,10 +9,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class AfterThrowingAdvice {
 
-	//@AfterThrowing(pointcut = "execution(public * com.nearby.service.NearbyServicesImpl.getCities(*))")
 	@AfterThrowing(pointcut = "execution(* com.nearby.service.NearbyServicesImpl.getCities(..))", throwing = "result")
 	public void afterThrowingAspect(JoinPoint joinpoint, Throwable result) {
-		
 		System.out.println("Exception occured so i am inside after throwing advice "+result);
 	}
 }
