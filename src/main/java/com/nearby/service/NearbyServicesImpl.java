@@ -28,7 +28,11 @@ public class NearbyServicesImpl<T> implements NearByService {
 	public List<String> getCities(String name) {
 		logger.info("Inside " + new Object() {
 		}.getClass().getEnclosingMethod().getName()+" "+cityList);
-				
+		
+		if(cityList.contains("Delhi")){
+			throw new RuntimeException("Pls make it pollution free");
+		}
+		
 		return (List<String>) cityList;
 	}
 
